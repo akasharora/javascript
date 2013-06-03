@@ -1,0 +1,37 @@
+<html>
+<head>
+
+</head>
+<body>
+<form id="form1">
+red:<input type="checkbox" name="alph"   id="box1"><br>
+green:<input type="checkbox" name="alph" id="box2"><br>
+yellow:<input type="checkbox" name="alph"id="box3"><br>
+black:<input type="checkbox" name="alph" id="box4"><br>
+white:<input type="checkbox" name="alph" id="box5"><br>
+</form>
+
+<script type="text/javascript">
+function SelectAll()
+{
+var check=document.getElementById("form1").getElementsByTagName("input");
+for(var i=0; i<check.length; i++)
+{
+check[i].checked=true;
+}
+
+}
+
+function SelectNone()
+{
+var check1=document.getElementById("form1").getElementsByTagName("input");
+for(var j=0; j<check1.length; j++)
+{
+check1[j].checked=false;
+}
+}
+</script>
+<input type="button" value="select all" onclick="SelectAll();";></button>
+<input type="button" value="select none" onclick="SelectNone();";></button>
+</body>
+</html>
