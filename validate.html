@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+#container{width:80%;}
+#header{
+background-color:green; color:white; text-align:center;}
+#content{background-color:#66CD00;}
+ul{list-style-type:none;}
+ul li{position:relative;  float:none;}
+ab{font-size:10px;}
+</style>
+</head>
+<body>
+<center>
+<div id="container">
+<div id="header">
+Registration Form
+</div>
+<div id="content">
+<center>
+<table border="0" id="tab">
+<tr>
+<td>Login Id<td><input type="text"  name="id"></tr>
+
+<tr>
+<td>Email:<td><input type="text" style="background:yellow;" id="email" ><br></tr>
+
+<tr>
+<td>Name:<td><input type="text" style="background:yellow;" id="name"><br></tr>
+
+<tr>
+<td>timezone:</td><td><select width="30px">
+<option value="GMT">GMT</option>
+<option value="GMT+0.30">GMT+0.30</option>
+<option value="GMT+1">GMT+1</option>
+<option value="GMT+1.30">GMT+1.30</option>
+<option value="GMT+2">GMT+2</option>
+</select></td>
+
+<tr>
+<td>Homepage</td><td><input type="text" id="hp" ></td>
+</tr>
+<tr>
+<td>About Me</td>
+</table>
+</center>
+<textarea rows="4" cols="27"></textarea><br>
+<input type="checkbox" name="notifications">Receive notification of comments<br>
+ <ab>You will be sent an email when someone posts comment to your blog or album</ab>
+<br><br>
+your password will be mailed to you<br>
+<input type="button" style="border-radius:100px;" onclick="CheckForm();"  value="GO"></button>
+</div>
+</div>
+<script src="validate.js">
+
+
+</script>
+
+</center>
+</body>
+</html>
