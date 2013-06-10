@@ -1,82 +1,35 @@
 <html>
-<head>
-<style>
-
-table td a{text-decoration:none; color:black;}
-tr {width:200px;}
-td{height:60px;}
-</style>
-
-
-<script src="dynamictable.js">
-function Edit(event)
-{
-
-}
-
-function Delete(event1)
-{
-var row1=event1.parentElement.parentElement;
-document.all("tab").deleteRow(row1.rowIndex);
-}
-
-function NewRow()
-{
-var a=document.getElementById("tab");
-
-var len=a.rows.length;
-var row=a.insertRow(len);
-
-var col1=row.insertCell(0);
-var element1=document.createElement("input");
-element1.type="textbox";
-col1.appendChild(element1);
-
-var col2=row.insertCell(1);
-var element2=document.createElement("input");
-element2.type="textbox";
-col2.appendChild(element2);
-
-var col3=row.insertCell(2);
-var element3=document.createElement("a");
-
-var edit=document.createTextNode("Edit/");
-element3.appendChild(edit)
-element3.setAttribute("onclick","Edit(this);");
+  <head>
+    <style>
+      table td a{text-decoration:none; color:black;}
+      tr {width:200px;}
+      td{height:60px;}
+    </style>
 
 
-var element4=document.createElement("a");
+    <script src="dynamictable.js">
+    </script>
+  </head>
 
-var del=document.createTextNode("Delete");
-element4.appendChild(del);
-element4.setAttribute("onclick","Delete(this);");
-
-col3.appendChild(element3);
-col3.appendChild(element4);
-
-}
-
-</script>
-
-
-</head>
-
-
-
-
-<body>
-<center>
-<table id="tab" border="1px">
-<tr>
-<th>Name</th>
-<th>Email</th>
-<th>Actions</th>
-</tr>
-<tr>
-<td>Akhil Bansal</td>
-<td>akhil@vinsol.com</td>
-<td><a   onclick="Edit(this);">Edit</a>/<a  onclick="Delete(this);">Delete</a></td>
-</table></center>
-<input type="button" style="margin-left:495px;" value="Add new row" name="new row" id="row" onclick="NewRow();"></button>
-</body>
+  <body>
+    <center>
+      <table id="tab" border="1px">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        
+        </tr>
+        <tr id="a1">
+          <td>Akhil Bansal</td>
+          <td>akhil@vinsol.com</td>
+          <td>
+            <a  onclick="Edit(this);">Edit</a>/
+            <a  onclick="Delete(this);">Delete</a>
+         </td>
+      </table>
+    </center>
+    <input type="button" style="margin-left:495px;" value="Add new row" name="new row" id="row" onclick="NewRow();"></button>
+  
+  </body>
 </html>
