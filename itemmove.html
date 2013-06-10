@@ -1,50 +1,21 @@
 <html>
-<head>
-</head>
-<body>
-<select size="4" id="lselect" style="float:left;" multiple>
-<option value="1">Iceland</option>
-<option value="2">Denmark</option>
-<option value="3">Italy</option>
-<option value="4">UK</option>
-<option value="5">Austria</option>
-<option value="6">Belgium</option>
-</select>
-<input type="button" id="add" value="add" onclick="ItemAdd(0);" ></button><br>
-<input type="button" id="delete"  value="delete" onclick="ItemAdd(1);"></button>
-<select size="4" id="rselect" style="margin-top:-25px;">
-</select>
-
-<script>
-function ItemAdd(direction)
-{
-var lsel=document.getElementById("lselect");
-var rsel=document.getElementById("rselect");
-var temp;
-var selected=[];
-
-if(direction)
-{
-temp=rsel;
-rsel=lsel;
-lsel=temp;
-}
-
-for(var i in lsel.options)
-{
-if(lsel.options[i].selected)
-{
-rsel.options.add(new Option(lsel.options[i].text, lsel.options[i].value));
-selected.unshift(i);
-}
-}
-for(i in selected)
-{
- lsel.options.remove(selected[i]);
-}
-}
+  <head>
+  </head>
+  <body>
+    <select size = "4" id = "lselect" style = "float:left;" multiple>
+      <option value = "1">Iceland</option>
+      <option value = "2">Denmark</option>
+      <option value = "3">Italy</option>
+      <option value = "4">UK</option>
+      <option value = "5">Austria</option>
+      <option value = "6">Belgium</option>
+    </select>
+    <input type = "button" id = "add" value = "add" onclick = "ItemAdd(0);" ></button><br>
+    <input type = "button" id = "delete"  value = "delete" onclick = "ItemAdd(1);"></button>
+    <select size = "4" id = "rselect" style = "margin-top:-25px;">
 
 
-</script>
-</body>
+    <script src = "itemmove.js">
+    </script>
+  </body>
 </html>
