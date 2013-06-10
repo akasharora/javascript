@@ -1,12 +1,12 @@
 function CheckValue() {
-    var a = document.getElementById("num");
-    var b = document.getElementById("result");
+    var number = document.getElementById("num");
+    var result = document.getElementById("result");
     var re = /^[0-9]+$/
-    if(!re.test(a.value)) {
-        b.value = "false"
+    if(!re.test(number.value)) {
+        result.value = "false"
         alert("you have entered wrong value");
     }
     else {
-        b.value = "true";
+        result.value = "true";
     }
 }

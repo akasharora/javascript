@@ -1,9 +1,9 @@
 function MaxThree() {
     var j = 0;
-    var p = document.getElementById("none");
+    var checknone = document.getElementById("none");
     var check = document.getElementById("form1").getElementsByTagName("input");
-    if(p.checked) {
-        p.checked = false;
+    if(checknone.checked) {
+        checknone.checked = false;
         this.checked = true;
     }
 
@@ -23,8 +23,8 @@ function MaxThree() {
 
 function SelectNone() {
     var s = document.getElementById("none")
-    var check1 = document.getElementById("form1").getElementsByTagName("input");
-    for(var i=0; i<check1.length; i++) {
-        check1[i].checked = false;
+    var checkboxes = document.getElementById("form1").getElementsByTagName("input");
+    for(var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = false;
     }
 }
