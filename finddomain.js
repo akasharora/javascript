@@ -1,20 +1,21 @@
-function FindDomain(){
-var a=document.getElementById("url").value;
-var b=document.getElementById("domain");
-var s=document.getElementById("subdomain");
-var c=a.split('//');
-var d=c[1].split('/');
-var e=d[0];
-var f=d[0].split('.');
-if(f.length==2)
-{
-b.value=d[0];
-s.value="";
-}
-else{
-s.value=f[0];
-for(var i=1;i<f.length;i++){
-b.value=b.value +f[i]+'.';
-}
-}
+function DomainSubdomain() {
+    console.log("hi")
+    var url = document.getElementById("url").value;
+    var domain = "", subdomain = "" ;
+    var matches = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i)
+    name= matches && matches[1];
+    name1 = name.split('.');
+    if(name1.length > 2) {
+        subdomain = name1[0];
+        for (var i = 1; i < name1.length; i++) {
+           domain = domain + name1[i] + '.'
+        }
+       alert("Your domain is "+domain + " and subdomain is " + subdomain)
+    }
+
+    else {
+        domain = name;
+    alert("Your domain is " + domain);
+    }
+    
 }
