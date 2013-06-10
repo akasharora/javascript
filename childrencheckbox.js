@@ -1,44 +1,38 @@
-function Display()
-{
-var a=document.getElementById("colors");
-var b=document.getElementById("movies");
-var c=document.getElementById("drinks");
-var d=document.getElementById("bikes");
-var e=document.getElementById("color");
-var f=document.getElementById("movie");
-var g=document.getElementById("drink");
-var h=document.getElementById("bike");
+function Display() {
+    var colors = document.getElementById("colors");
+    var movies = document.getElementById("movies");
+    var drinks = document.getElementById("drinks");
+    var bikes = document.getElementById("bikes");
+    var col = document.getElementById("color");
+    var mov = document.getElementById("movie");
+    var drink = document.getElementById("drink");
+    var bike = document.getElementById("bike");
 
-if(a.checked)
-{
-e.style.visibility="visible";
-}
-else{
-e.style.visibility="hidden";
-}
+    if(colors.checked) {
+        col.style.visibility = "visible";
+    }
+    else {
+        col.style.visibility = "hidden";
+    }
 
-if(b.checked)
-{
-f.style.visibility="visible";
-}
-else{
-f.style.visibility="hidden";
-}
+    if(movies.checked) {
+        movie.style.visibility = "visible";
+    }
+    else {
+        movie.style.visibility = "hidden";
+    }
 
-if(c.checked)
-{
-g.style.visibility="visible";
-}
-else{
-g.style.visibility="hidden";
-}
+    if(drinks.checked) {
+        drink.style.visibility = "visible";
+    }
+    else {
+        drink.style.visibility = "hidden";
+    }
 
-if(d.checked)
-{
-h.style.visibility="visible";
-}
-else{
-h.style.visibility="hidden";
-}
-
+    if(bikes.checked) {
+        bike.style.visibility = "visible";
+    }
+    else {
+        bike.style.visibility = "hidden";
+    }
 }
