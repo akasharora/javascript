@@ -1,55 +1,21 @@
 <html>
-<head>
-</head>
-<body>
-<form id="form1" onclick="MaxThree();">
-Sun:<input type="checkbox" name="alpha" id="box1" ;><br>
-Mon:<input type="checkbox" name="alpha" id="box2" ;><br>
-Tue:<input type="checkbox" name="alpha" id="box3" ;><br>
-Wed:<input type="checkbox" name="alpha" id="box4" ;><br>
-Thu:<input type="checkbox" name="alpha" id="box5" ;><br>
-Fri:<input type="checkbox" name="alpha" id="box6" ;><br>
-</form>
+  <head>
+  </head>
+  <body>
+    <form id="form1" onclick="MaxThree();">
+      Sun:<input type="checkbox" name="alpha" id="box1" ;><br>
+      Mon:<input type="checkbox" name="alpha" id="box2" ;><br>
+      Tue:<input type="checkbox" name="alpha" id="box3" ;><br>
+      Wed:<input type="checkbox" name="alpha" id="box4" ;><br>
+      Thu:<input type="checkbox" name="alpha" id="box5" ;><br>
+      Fri:<input type="checkbox" name="alpha" id="box6" ;><br>
+    </form>
 
-None:<input type="checkbox" name="none"  id="none" onclick="SelectNone();"; ><br>
-<script type="text/javascript">
+    None:<input type="checkbox" name="none"  id="none" onclick="SelectNone();"; ><br>
 
-function MaxThree()
-{
-j=0;
+    <script src="weekcheck.js">
+    </script>
 
-var p=document.getElementById("none");
-var check=document.getElementById("form1").getElementsByTagName("input");
-if(p.checked)
- {
-  p.checked=false;
-  this.checked=true;
- }
-   for(var i=0; i<check.length; i++)
-    {
-     if(check[i].checked)
-       {
-         j=j+1;
-       }
-    
-       if(j>3)
-              {
-              check[i].checked=false; 
-              window.alert("you can't select more than three days");
-              return false; 
-}    }         }
-
-
-function SelectNone(){
-var s=document.getElementById("none")
-var check1=document.getElementById("form1").getElementsByTagName("input");
-
-for(var i=0; i<check1.length; i++){
-check1[i].checked=false;
-}
-}
-</script>
-
-</body>
+  </body>
 </html>
 

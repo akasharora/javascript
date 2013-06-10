@@ -18,6 +18,6 @@ function CheckForm() {
         msg = "form validated"
     }
     alert(msg);
-    preventDefault();
+    
 }
 

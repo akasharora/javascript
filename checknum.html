@@ -1,26 +1,13 @@
 <html>
-<head>
-</head>
-<body>
+  <head>
+  </head>
+  <body>
+    Enter Number:<input type="textbox" id="num"> 
+    Result:<input type="textbox" id="result">
 
-Enter Number:<input type="textbox" id="num"> 
-Result:<input type="textbox" id="result"> 
-<input type ="button" id="but" value="submit" onclick="CheckValue();"></button>
-<script>
+    <input type ="button" id="but" value="submit" onclick="CheckValue();"></button>
 
-function CheckValue(){
-var a=document.getElementById("num");
-var b=document.getElementById("result");
-var re=/^[0-9]+$/
-if(!re.test(a.value)){
-b.value="false"
-alert("you have entered wrong value");
-}
-else
-{
-b.value="true";
-}
-}
-</script>
-</body>
+    <script src = "checknum.js">
+    </script>
+  </body>
 </html>

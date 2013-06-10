@@ -34,5 +34,5 @@ function CheckForm1() {
     }
 
     alert(msg);
-    preventDefault();
+    
 }
