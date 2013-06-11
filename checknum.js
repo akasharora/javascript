@@ -1,12 +1,11 @@
-function CheckValue() {
-    var number = document.getElementById("num");
+function checkValue() {
+    var number = document.getElementById("userinput");
     var result = document.getElementById("result");
-    var re = /^[0-9]+$/
-    if(!re.test(number.value)) {
-        result.value = "false"
+    var number_regex = /^[0-9]+$/;
+    if (!number_regex.test(number.value)) {
+        result.value = "false";
         alert("you have entered wrong value");
-    }
-    else {
+    } else {
         result.value = "true";
     }
 }
