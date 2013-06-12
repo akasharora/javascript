@@ -1,49 +1,65 @@
 <html>
   <head>
-    <style>
-      ul{display:block; float:left; list-style-type:none;}
-    </style>
+    <link rel="stylesheet" type="text/css" href="checkbox.css">
   </head>
 
-  
-
   <body>
-    <div height="100px" style="overflow:auto; ">
-    <ul>
-      <li>Color:<input type = "checkbox"  id = "colors" onclick = "Display();">
-        <div id = "color" style = "visibility:hidden;">
-          Red<input type = "checkbox" id = "color2">
-          Green<input type = "checkbox" id = "color3">
-          White<input type = "checkbox" id = "color4">
-        </div><br>
-      </li>
+    <div id = "container">
+      <ul>
 
-      <li>Movies:<input type = "checkbox" id = "movies" onclick = "Display();">
-        <div id="movie" style = "visibility:hidden;">
-          Dar<input type = "checkbox" id = "movie2">
-          Sir<input type = "checkbox" id = "movie3">
-        </div><br>
-      </li>
+        <li>
+          <form id = "colors"  onclick = "display(this.id)">
+          	Color:<input type = "checkbox"  id = "colors" >
+          	<div id = "color" >
+           	<ul>
+							<li>Red<input type = "checkbox"  id = "color2"></li>
+            	<li>Green<input type = "checkbox"  id = "color3"></li>
+            	<li>White<input type = "checkbox"  id = "color4"></li>
+          	</ul>
+						</div><br>
+          </form>
+				</li>
 
-      <li>Drinks:<input type = "checkbox" id = "drinks" onclick = "Display();">
-        <div id = "drink" style = "visibility:hidden;">
-          Pepsi<input type = "checkbox" id = "drink1">
-          Coke<input type = "checkbox" id = "drink2">
-          Dew<input type = "checkbox" id = "drink3">
-        </div><br>
-      </li>
+        <li>
+					<form id = "movies"  onclick = "display(this.id)">
+          	Movies:<input type = "checkbox" id = "movies" >
+          	<div id="movie" >
+          	<ul>	
+							<li>Dar<input type = "checkbox" id = "movie2"></li>
+            	<li>Sir<input type = "checkbox" id = "movie3"></li>
+						</ul>
+          	</div><br>
+          </form>
+        </li>
+          
+        <li>
+          <form id = "drinks"  onclick = "display(this.id)" >
+          	Drinks:<input type = "checkbox" id = "drinks" >
+          	<div id = "drink" >
+          	<ul>
+ 					  	<li>Pepsi<input type = "checkbox" id = "drink1"></li>
+            	<li>Coke<input type = "checkbox" id = "drink2"></li>
+            	<li>Dew<input type = "checkbox" id = "drink3"></li>
+          	</ul>
+          	</div><br>
+          </form>
+        </li>
 
-      <li>Bikes:<input type = "checkbox"  id = "bikes"  onclick = "Display();">
-        <div id = "bike" style = "visibility:hidden;">
-          Pulsar<input type = "checkbox" id = "bike1">
-          Cbz<input type = "checkbox" id = "bike2">
-          KTM Duke<input type = "checkbox" id = "bike3">
-        </div><br>
-     </li>
-  </ul>
+        <li>
+          <form id = "bikes"  onclick = "display(this.id)" >
+          	Bikes:<input type = "checkbox"  id = "bikes"  >
+          	<div id = "bike" >
+          	<ul>
+					  	<li>Pulsar<input type = "checkbox" id = "bike1"></li>
+            	<li>Cbz<input type = "checkbox" id = "bike2"></li>
+            	<li>KTM Duke<input type = "checkbox" id = "bike3"></li>
+          	</div><br>
+         </form>
+       </li>
+     </ul>
 
-  <script src = "childrencheckbox.js">
-  </script>
-
+      <script src = "childrencheckbox.js">
+      </script>
+    </div>
   </body>
 </html>

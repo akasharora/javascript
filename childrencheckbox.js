@@ -1,38 +1,13 @@
-function Display() {
-    var colors = document.getElementById("colors");
-    var movies = document.getElementById("movies");
-    var drinks = document.getElementById("drinks");
-    var bikes = document.getElementById("bikes");
-    var col = document.getElementById("color");
-    var mov = document.getElementById("movie");
-    var drink = document.getElementById("drink");
-    var bike = document.getElementById("bike");
-
-    if(colors.checked) {
-        col.style.visibility = "visible";
+function display(clicked_id) {
+    var checkboxes = document.getElementById(clicked_id).getElementsByTagName("input")
+    var list = document.getElementById(clicked_id).getElementsByTagName("ul")
+    if (checkboxes[0].checked) {
+        list[0].style.visibility = "visible"
+    } else {
+        list[0].style.visibility = "hidden"
+        for (var i = 1; i < checkboxes.length; i++) {
+						checkboxes[i].checked = false ;       
+				}
     }
-    else {
-        col.style.visibility = "hidden";
-    }
-
-    if(movies.checked) {
-        movie.style.visibility = "visible";
-    }
-    else {
-        movie.style.visibility = "hidden";
-    }
-
-    if(drinks.checked) {
-        drink.style.visibility = "visible";
-    }
-    else {
-        drink.style.visibility = "hidden";
-    }
-
-    if(bikes.checked) {
-        bike.style.visibility = "visible";
-    }
-    else {
-        bike.style.visibility = "hidden";
-    }
+    
 }
