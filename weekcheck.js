@@ -1,7 +1,7 @@
 var checkboxes = document.getElementById("form1").getElementsByTagName("input");
 
 function maxThreeSelected(clicked) {
-    var j = 0;
+    var count = 0;
     var checknone = document.getElementById("none");
     if (checknone.checked) {
         checknone.checked = false;
@@ -9,9 +9,9 @@ function maxThreeSelected(clicked) {
     }
     for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
-            j = j + 1;
+            count = count + 1;
         }
-        if (j > 3) {
+        if (count > 3) {
             clicked.checked = false; 
             window.alert("you can't select more than three days");
             return false;
