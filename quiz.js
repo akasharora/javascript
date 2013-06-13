@@ -97,7 +97,7 @@ function displayAnswer() {
     document.write("Test Finished: Your Results")
     document.write("<br>" + "your score is " + score)
     for(var p = 0; p < 20; p++) {
-        document.write( "<br/>" + (p+1) +  "." + "Actual Output= " + JSONObject[p].actual_op +  "     Your Output =  " + JSONObject[p].user_op);
+        document.write( "<br/>" + (p+1) +  "." + "Actual Output= " + JSONObject[p].actual_op +  "     Your Output =  " + JSONObject [p].user_op);
     }
     return false;
     

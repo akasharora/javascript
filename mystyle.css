@@ -1,0 +1,8 @@
+#container{width:80%;}
+#header{ background-color:green; color:white; text-align:center;}
+#content{background-color:#66CD00;}
+ul{list-style-type:none;}
+ul li{position:relative;  float:none;}
+ab{font-size:10px;}
+#reset{border-radius:100px;}
+#go{border-radius:100px;}

@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+  </head>
+  <body>
+    <center>
+      <div id="container">
+        <div id="header">
+          Registration Form
+        </div>
+        <div id="content">
+          <center>
+            <form id = "form1" onsubmit="checkForm1();">
+              <table border="0" id="tab">
+                <tr>
+                  <td>Login Id<td><input type="text" id="login" name="login"></tr>
+
+                <tr>
+                  <td>Email:<td><input type="text" style="background:yellow;" id="email" ><br></tr>
+
+                <tr>
+                  <td>Name:<td><input type="text" style="background:yellow;" id="name1"><br></tr>
+
+                <tr>
+                  <td>timezone:</td>
+                  <td>
+                    <select width="30px">
+                      <option value="GMT">GMT</option>
+                      <option value="GMT+0.30">GMT+0.30</option>
+                      <option value="GMT+1">GMT+1</option>
+                      <option value="GMT+1.30">GMT+1.30</option>
+                      <option value="GMT+2">GMT+2</option>
+                    </select>
+                  </td>
+
+               <tr>
+                 <td>Homepage</td>
+                 <td><input type="text" id="home2" ></td>
+              </tr>
+              <tr>
+                <td>About Me</td>
+      </table>
+      </center>
+    <textarea id="tarea" rows="4" cols="27"></textarea><br>
+
+    <input type="checkbox" id="check" name="notifications">Receive notification of comments<br>
+    <ab>You will be sent an email when someone posts comment to your blog or album</ab>
+    <br><br>
+    your password will be mailed to you<br>
+    <input type="submit" id="go" value="GO"></button>
+    <input type="reset" id="reset" value="Reset"></reset>
+    </div>
+  </div>
+
+
+    <script src="validateform.js">
+    </script>
+
+  </center>
+</body>
+</html>
