@@ -1,18 +1,19 @@
-var msg = document.getElementById("hello");
+var message = document.getElementById("hello");
 var firstname = prompt("please enter your first name");
 var name_regex = /^[a-z]+$/;
+var msg = "";
 if (name_regex.test(firstname)) {
     var lastname = prompt("please enter your last name");
     if (name_regex.test(lastname)) {
-        alert("hello " + firstname + " " + lastname);
-        var output = "hello " + firstname + " " + lastname + ", how are you?";
-        msg.textContent = output;
+        msg = "hello " + firstname + " " + lastname;
     } else {
-    alert("please try again and enter your last name");
+        msg = "please try again and enter your last name";
     }
 } else {
-    alert("please enter your first name");
+    msg = "please enter your first name";
 }
-
-
+if (msg) {
+    alert(msg)
+    message.textContent = msg;
+}
 
