@@ -6,7 +6,7 @@ function displayChildren(clicked_id) {
     } else {
         list[0].style.visibility = "hidden"
         for (var i = 1; i < checkboxes.length; i++) {
-				    checkboxes[i].checked = false ;       
+            checkboxes[i].checked = false ;       
 				}
     }
 }
