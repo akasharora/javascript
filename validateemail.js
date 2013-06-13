@@ -8,11 +8,12 @@ function checkForm() {
 
     if(!email_regex.test(email.value)) {
         msg = "enter correct email";
-    } else if(!homepage_regex.test(homepage.value)) {
+    } else if (!homepage_regex.test(homepage.value)) {
         msg = "Enter correct homepage";
     }
-    if(msg != "") {
+    if (msg != "") {
        alert(msg);
+       return false;
     } else { 
         alert("form validated")
     }
