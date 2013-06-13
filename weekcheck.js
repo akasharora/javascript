@@ -20,7 +20,6 @@ function maxThreeSelected(clicked) {
 }
 
 function selectNone() {
-    var s = document.getElementById("none")
     for(var i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = false;
     }
