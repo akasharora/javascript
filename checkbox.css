@@ -1,3 +1,7 @@
 ul{list-style-type:none;}
 li ul{visibility:hidden;}
-#container{overflow:scroll; height:100px; width:400px"}
+#container{overflow:scroll; height:100px;}
+
+ul li{margin-top:-20px; font-size:12px;}
+form ul li{margin-top:0px}
+
