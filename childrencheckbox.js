@@ -1,4 +1,4 @@
-function display(clicked_id) {
+function displayChildren(clicked_id) {
     var checkboxes = document.getElementById(clicked_id).getElementsByTagName("input")
     var list = document.getElementById(clicked_id).getElementsByTagName("ul")
     if (checkboxes[0].checked) {
@@ -9,5 +9,4 @@ function display(clicked_id) {
 						checkboxes[i].checked = false ;       
 				}
     }
-    
 }
