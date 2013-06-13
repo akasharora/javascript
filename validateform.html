@@ -10,19 +10,32 @@
         </div>
         <div id="content">
           <center>
-            <form id = "form1" onsubmit="checkForm1();">
+            <form id = "form1" onsubmit="return checkForm()">
               <table border="0" id="tab">
                 <tr>
-                  <td>Login Id<td><input type="text" id="login" name="login"></tr>
+                  <td>Login Id
+                  </td>
+                  <td><input type="text" id="login" name="login">
+                  </td>
+                </tr>
 
                 <tr>
-                  <td>Email:<td><input type="text" style="background:yellow;" id="email" ><br></tr>
+                  <td>Email:
+                  </td>
+                  <td><input type="text" style="background:yellow;" id="email" >
+                  </td>
+                </tr>
 
                 <tr>
-                  <td>Name:<td><input type="text" style="background:yellow;" id="name1"><br></tr>
+                  <td>Name:
+                  </td>
+                  <td><input type="text" style="background:yellow;" id="name1">
+                  </td>
+                </tr>
 
                 <tr>
-                  <td>timezone:</td>
+                  <td>timezone:
+                  </td>
                   <td>
                     <select width="30px">
                       <option value="GMT">GMT</option>
@@ -32,23 +45,28 @@
                       <option value="GMT+2">GMT+2</option>
                     </select>
                   </td>
-
+               </tr>
                <tr>
-                 <td>Homepage</td>
-                 <td><input type="text" id="home2" ></td>
+                 <td>Homepage
+                 </td>
+                 <td><input type="text" id="home2" >
+                 </td>
               </tr>
               <tr>
-                <td>About Me</td>
-      </table>
-      </center>
-    <textarea id="tarea" rows="4" cols="27"></textarea><br>
+                <td>About Me
+                </td>
+              </tr>
+            </table>
+          </center>
+    <textarea id="t_area" rows="4" cols="27"></textarea><br>
 
-    <input type="checkbox" id="check" name="notifications">Receive notification of comments<br>
+    <input type="checkbox" id="check" onclick = "confirmNotification();" >Receive notification of comments<br>
     <ab>You will be sent an email when someone posts comment to your blog or album</ab>
     <br><br>
     your password will be mailed to you<br>
-    <input type="submit" id="go" value="GO"></button>
+    <input type="submit"  id="go" value="GO"></button>
     <input type="reset" id="reset" value="Reset"></reset>
+      </form>
     </div>
   </div>
 
@@ -56,6 +74,6 @@
     <script src="validateform.js">
     </script>
 
-  </center>
+    </center>
 </body>
 </html>

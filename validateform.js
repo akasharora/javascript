@@ -1,10 +1,10 @@
-function checkForm1() {
+function checkForm() {
     var login = document.getElementById("login");
     var email = document.getElementById("email");
     var name = document.getElementById("name1");
     var home = document.getElementById("home2");
-    var textar = document.getElementById("tarea");
-    var chbox = document.getElementById("check");
+    var textar = document.getElementById("text_area");
+    var checkbox = document.getElementById("check");
     var email_regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     var homepage_regex = /^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])$/;
     var msg = "";
@@ -21,13 +21,13 @@ function checkForm1() {
         msg = "information is not complete: should be minimum 50 characters";
     }
 
-    if(chbox.checked) {
-        confirm ("are you sure you want to receive notifications?");
-    }
-
-    if (msg!= "") {
+    if (msg != "") {
         alert(msg);
-        preventDefault();
         return false;
     }
+    
+}
+
+function confirmNotification() {
+    confirm("are you sure you want to receive notifications")
 }
