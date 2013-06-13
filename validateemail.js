@@ -6,7 +6,7 @@ function checkForm() {
     var homepage_regex = /^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])$/;
     var msg = "";
 
-    if(!email_regex.test(email.value)) {
+    if (!email_regex.test(email.value)) {
         msg = "enter correct email";
     } else if (!homepage_regex.test(homepage.value)) {
         msg = "Enter correct homepage";
