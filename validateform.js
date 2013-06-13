@@ -11,13 +11,13 @@ function checkForm() {
 
     if(login.value == "") {
         msg = "login Id can't be empty";
-    } else if(!email_regex.test(email.value)) {
+    } else if (!email_regex.test(email.value)) {
         msg = "enter correct email";
-    } else if(name.value == "") {
+    } else if (name.value == "") {
         msg = "name field can't be empty";
-    } else if(!homepage_regex.test(home.value)){
+    } else if (!homepage_regex.test(home.value)){
         msg = "you have entered an invalid homepage";
-    } else if(textar.value.length < 50){
+    } else if (textar.value.length < 50){
         msg = "information is not complete: should be minimum 50 characters";
     }
 
