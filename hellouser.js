@@ -6,7 +6,7 @@ var screen_message = ""
 if (name_regex.test(firstname)) {
     var lastname = prompt("please enter your last name");
     if (name_regex.test(lastname)) {
-        screen_message = "hello " + firstname + " " + lastname;
+        msg = "hello " + firstname + " " + lastname;
         
     } else {
         msg = "please try again and enter your last name properly";
@@ -17,5 +17,5 @@ if (name_regex.test(firstname)) {
 if (msg) {
     alert(msg)
 }
-message.textContent = screen_message;
+message.innerHTML = msg;
 
