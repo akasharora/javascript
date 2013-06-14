@@ -1,8 +1,8 @@
-function checkForm() {
+function validateForm() {
     var login = document.getElementById("login");
     var email = document.getElementById("email");
-    var name = document.getElementById("name1");
-    var home = document.getElementById("home2");
+    var name = document.getElementById("name");
+    var homepage = document.getElementById("homepage");
     var textar = document.getElementById("text_area");
     var checkbox = document.getElementById("check");
     var email_regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -15,7 +15,7 @@ function checkForm() {
         msg = "enter correct email";
     } else if (name.value == "") {
         msg = "name field can't be empty";
-    } else if (!homepage_regex.test(home.value)){
+    } else if (!homepage_regex.test(homepage.value)){
         msg = "you have entered an invalid homepage";
     } else if (textar.value.length < 50){
         msg = "information is not complete: should be minimum 50 characters";
@@ -24,8 +24,9 @@ function checkForm() {
     if (msg != "") {
         alert(msg);
         return false;
+    } else {
+        return true;
     }
-    
 }
 
 function confirmNotification() {

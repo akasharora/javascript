@@ -1,40 +1,48 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="validateform.css">
   </head>
-  <body>
+    <body>
     <center>
       <div id="container">
         <div id="header">
           Registration Form
         </div>
         <div id="content">
-          <center>
-            <form id = "form1" onsubmit="return checkForm()">
-              <table border="0" id="tab">
+          
+          <form onsubmit="return validateForm()">
+            <center>
+              <table>
                 <tr>
-                  <td>Login Id
+                  <td>
+                    Login Id
                   </td>
-                  <td><input type="text" id="login" name="login">
+                  <td>
+                    <input type="text" id="login">
                   </td>
                 </tr>
 
                 <tr>
-                  <td>Email:
+                  <td>
+                    Email:
                   </td>
-                  <td><input type="text" style="background:yellow;" id="email" >
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Name:
-                  </td>
-                  <td><input type="text" style="background:yellow;" id="name1">
+                  <td>
+                    <input type="text" id="email" >
                   </td>
                 </tr>
 
                 <tr>
-                  <td>timezone:
+                  <td>
+                    Name:
+                  </td>
+                  <td>
+                    <input type="text"  id="name">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    timezone:
                   </td>
                   <td>
                     <select width="30px">
@@ -45,35 +53,37 @@
                       <option value="GMT+2">GMT+2</option>
                     </select>
                   </td>
-               </tr>
-               <tr>
-                 <td>Homepage
-                 </td>
-                 <td><input type="text" id="home2" >
-                 </td>
-              </tr>
-              <tr>
-                <td>About Me
-                </td>
-              </tr>
-            </table>
-          </center>
-    <textarea id="t_area" rows="4" cols="27"></textarea><br>
-
-    <input type="checkbox" id="check" onclick = "confirmNotification();" >Receive notification of comments<br>
-    <ab>You will be sent an email when someone posts comment to your blog or album</ab>
-    <br><br>
-    your password will be mailed to you<br>
-    <input type="submit"  id="go" value="GO"></button>
-    <input type="reset" id="reset" value="Reset"></reset>
-      </form>
-    </div>
-  </div>
+                </tr>
+                <tr>
+                  <td>
+                    Homepage
+                  </td>
+                  <td>
+                    <input type="text" id="homepage" >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    About Me
+                  </td>
+                </tr>
+              </table>
+            </center>
+            <textarea id="text_area" rows="4" cols="27"></textarea><br>
+            <input type="checkbox" id="check" onclick = "confirmNotification();" >Receive notification of comments<br>
+            <p class = "para">You will be sent an email when someone posts comment to your blog or album</p>
+            <br> 
+            your password will be mailed to you<br>
+            <input type="submit"  id="go" value="GO"></button>
+            <input type="reset" id="reset" value="Reset"></reset>
+            </form>
+        </div>
+      </div>
 
 
     <script src="validateform.js">
     </script>
 
     </center>
-</body>
+  </body>
 </html>
