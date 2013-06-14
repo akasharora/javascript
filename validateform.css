@@ -3,6 +3,9 @@
 #content{background-color:#66CD00;}
 ul{list-style-type:none;}
 ul li{position:relative;  float:none;}
-ab{font-size:10px;}
+.para{font-size:10px;}
 #reset{border-radius:100px;}
 #go{border-radius:100px;}
+#name{background:yellow;}
+#email{background:yellow;}
+table{border:0;}
