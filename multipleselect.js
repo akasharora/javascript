@@ -1,22 +1,27 @@
-function itemAdd(direction) {
-    var left_select = document.getElementById("lselect");
-    var right_select = document.getElementById("rselect");
+function itemAdd(value) {
+    
+    var left_select = document.getElementById("leftselect");
+    var right_select = document.getElementById("rightselect");
     var temp;
-    var selected = [];
-
-    if (direction) {
-        temp = right_select;
-        right_select = left_select;
-        left_select = temp;
+ 
+    if (value) {
+    temp = left_select;
+    left_select = right_select;
+    right_select = temp;
     }
-
-    for (var i in left_select.options) {
-        if (left_select.options[i].selected) {
-            right_select.options.add(new Option(left_select.options[i].text, left_select.options[i].value));
-            selected.unshift(i);
+ 
+    for (var count=0; count < left_select.options.length; count++) {
+ 
+        if (left_select.options[count].selected == true) {
+                var option = left_select.options[count];
+                var newOption = document.createElement("option");
+                newOption.value = option.value;
+                newOption.text = option.text;
+                newOption.selected = false;
+                
+                right_select.add(newOption);
+                left_select.remove(count);
+                count--;
         }
-    }
-    for(i in selected) {
-        left_select.options.remove(selected[i]);
     }
 }
