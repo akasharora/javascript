@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="validateform.css">
+  </head>
+
+  <body>
+    <center>
+      <div id="container">
+        <div id="header">
+          Registration Form
+        </div>
+        <div id="content">
+          
+          <form onsubmit="return validateForm()">
+            <center>
+              <table>
+                <tr>
+                  <td>
+                    Login Id
+                  </td>
+                  <td>
+                    <input type="text" id="login">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Email:
+                  </td>
+                  <td>
+                    <input type="text" id="email" >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Name:
+                  </td>
+                  <td>
+                    <input type="text"  id="name">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    timezone:
+                  </td>
+                  <td>
+                    <select width="30px">
+                      <option value="GMT">GMT</option>
+                      <option value="GMT+0.30">GMT+0.30</option>
+                      <option value="GMT+1">GMT+1</option>
+                      <option value="GMT+1.30">GMT+1.30</option>
+                      <option value="GMT+2">GMT+2</option>
+                    </select>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Homepage
+                  </td>
+                  <td>
+                    <input type="text" id="homepage" >
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    About Me
+                  </td>
+                </tr>
+
+              </table>
+            </center>
+            <textarea id="text_area" rows="4" cols="27"></textarea><br>
+            <input type="checkbox">Receive notification of comments<br>
+            <p class = "para">You will be sent an email when someone posts comment to your blog or album</p>
+            your password will be mailed to you<br>
+            <input type="submit"  id="go" value="GO"></button>
+
+          </form>
+
+        </div>
+      </div>
+    </center>
+
+    <script src="emailandurlvalidation.js">
+    </script>
+
+    </center>
+  </body>
+</html>
