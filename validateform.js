@@ -27,6 +27,8 @@ function validateForm() {
     }
 }
 
-function confirmNotification() {
-    confirm("are you sure you want to receive notifications")
+function confirmNotification(clicked) {
+    if (clicked.checked) {
+        confirm("are you sure you want to receive notifications");
+    }
 }
