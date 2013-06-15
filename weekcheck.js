@@ -1,11 +1,11 @@
-var checkboxes = document.getElementById("form1").getElementsByTagName("input");
+var checkboxes = document.getElementById("weekDays").getElementsByTagName("input");
 
 function maxThreeSelected(clicked) {
     var count = 0;
-    var checknone = document.getElementById("none");
-    if (checknone.checked) {
-        checknone.checked = false;
-        this.checked = true;
+    var check_none = document.getElementById("none");
+    if (check_none.checked) {
+        check_none.checked = false;
+        clicked.checked = true;
     }
     for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
