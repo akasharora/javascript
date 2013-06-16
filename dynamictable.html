@@ -1,19 +1,13 @@
 <html>
   <head>
-    <style>
-      table td a{text-decoration:none; color:black;}
-      tr {width:200px;}
-      td{height:60px;}
-    </style>
-
-
+    <link rel="stylesheet" type="text/css" href="dynamictable.css">
     <script src = "dynamictable.js">
     </script>
   </head>
 
   <body>
     <center>
-      <table id = "tab" border = "1px">
+      <table id = "data_table" border = "1px">
         <tr>
           <th>
             Name
@@ -27,7 +21,7 @@
         </tr>
       </table>
     </center>
-    <input type = "button" style = "margin-left:495px;" value = "Add new row" name = "new row" id = "row" onclick = "newRow();"></button>
+    <input type = "button" id = "newrow" value = "Add new row" name = "new row" id = "row" onclick = "newRowAndEdit(this,this.id);"></button>
     
   </body>
 </html>
