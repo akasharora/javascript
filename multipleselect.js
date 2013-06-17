@@ -14,12 +14,8 @@ function itemAdd(value) {
  
         if (left_select.options[count].selected == true) {
                 var option = left_select.options[count];
-                var newOption = document.createElement("option");
-                newOption.value = option.value;
-                newOption.text = option.text;
-                newOption.selected = false;
                 
-                right_select.add(newOption);
+                right_select.add(new Option(option.text, option.value));
                 left_select.remove(count);
                 count--;
         }
