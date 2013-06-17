@@ -62,14 +62,14 @@ function newRowAndEdit(clicked, operation) {
 
 function onSaveClick(clicked) {
     var rowindex = row_index(clicked);
-    var row1 = document.getElementById("data_table").rows[rowindex];
-    row1.deleteCell(2);
-    var cell = row1.getElementsByTagName("input");
+    var row_1 = document.getElementById("data_table").rows[rowindex];
+    row_1.deleteCell(2);
+    var cell = row_1.getElementsByTagName("input");
     var string = []
     for (var i = 0; i < cell.length; i++) {
         string[i] = cell[i].value;
     }
-    save(row1,string);
+    save(row_1,string);
     
     var table_rows = document.getElementById("data_table").getElementsByTagName("tr")
     var column_3 = table_rows[rowindex].insertCell(2);
