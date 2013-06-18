@@ -1,6 +1,6 @@
-var checkboxes = document.getElementById("form1").getElementsByTagName("input");
+var checkboxes = document.getElementById("colors").getElementsByTagName("input");
 
-function selectCheckbox(value) {
+function selectCheckboxes(value) {
     for (var i = 0; i < checkboxes.length; i++) {
         if (value) {
             checkboxes[i].checked = true;
