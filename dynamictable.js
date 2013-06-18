@@ -5,8 +5,7 @@ function row_index(clicked) {
     var row_index;
     while ((clicked = clicked.parentElement) && clicked.nodeName.toLowerCase() != "tr") {
     }
-    row_index = clicked.rowIndex;
-    return row_index;
+    return clicked.rowIndex;
 }
 
 function remove(clickedRow) {
@@ -14,7 +13,7 @@ function remove(clickedRow) {
     document.getElementById("data_table").deleteRow(rowindex);
 }
 
-function newRowAndEdit(clicked, operation) {
+function newRowAndEdit(clicked, operation) {             //this function performs both operations adds new row as well as edits row
     var rowindex;
     var row;
 
@@ -28,24 +27,20 @@ function newRowAndEdit(clicked, operation) {
     
     if (operation == "edit") {
         row = document.getElementById("data_table").rows[rowindex]
-        row.deleteCell(0); 
+       
     }
-
-    var cell_1 = row.insertCell(0);
-    var element_1 = document.createElement("input");
-    element_1.type = "textbox";
-    element_1.setAttribute("id", (++td_id));
-    cell_1.appendChild(element_1);
-     
-    if (operation == "edit") {
-        row.deleteCell(1);
+    var cell =[];
+    var element = [];
+    for (var i = 0; i < 2; i++) {
+        if (operation == "edit") {
+            row.deleteCell(i);
+        }  
+        cell[i] = row.insertCell(i);
+        element[i] = document.createElement("input");
+        element[i].type = "textbox";
+        element[i].setAttribute("id", (++td_id));
+        cell[i].appendChild(element[i]);
     }
-
-    var cell_2 = row.insertCell(1);
-    var element_2 = document.createElement("input");
-    element_2.type = "textbox";
-    element_2.setAttribute("id",(++td_id));
-    cell_2.appendChild(element_2);
     
     if (operation == "edit") {
         row.deleteCell(2);
@@ -62,14 +57,15 @@ function newRowAndEdit(clicked, operation) {
 
 function onSaveClick(clicked) {
     var rowindex = row_index(clicked);
-    var row_1 = document.getElementById("data_table").rows[rowindex];
-    row_1.deleteCell(2);
-    var cell = row_1.getElementsByTagName("input");
+    var row1 = document.getElementById("data_table").rows[rowindex];
+    row1.deleteCell(2);
+    var cell = row1.getElementsByTagName("input");
     var string = []
     for (var i = 0; i < cell.length; i++) {
         string[i] = cell[i].value;
     }
-    save(row_1,string);
+    save(row1,string,0);
+    save(row1,string,1);
     
     var table_rows = document.getElementById("data_table").getElementsByTagName("tr")
     var column_3 = table_rows[rowindex].insertCell(2);
@@ -87,18 +83,12 @@ function onSaveClick(clicked) {
     column_3.appendChild(element_4);
     
 }
-function save(row,string) {
-     row.deleteCell(0);
-     var column_1 = row.insertCell(0);
-     var cell_1 = document.createElement("p");
-     var cell1_data = document.createTextNode(string[0])
-     cell_1.appendChild(cell1_data);
-     column_1.appendChild(cell_1)
+function save(row,string,val) {
+     row.deleteCell(val);
+     var column = row.insertCell(val);
+     var cell = document.createElement("p");
+     var cellData = document.createTextNode(string[val])
+     cell.appendChild(cellData);
+     column.appendChild(cell)
      
-     row.deleteCell(1);
-     var column_2 = row.insertCell(1);
-     var cell_2 = document.createElement("p");
-     var cell2_data = document.createTextNode(string[1]);
-     cell_2.appendChild(cell2_data)
-     column_2.appendChild(cell_2);
 }
