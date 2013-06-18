@@ -1,12 +1,10 @@
 function randomNumber() {
-    var variable = Math.floor((Math.random() * 20) + 1);
-    return variable;
+    return (Math.floor((Math.random() * 20) + 1));
 }
 
 function randomOperator() {
     var operators = ['+', '-', '/', '*'];
-    var index = Math.floor((Math.random() * 4));
-    return operators[index];
+    return operators[Math.floor((Math.random() * 4))];
 }
 
 var operand1 = [];
@@ -27,36 +25,40 @@ for (var i = 0; i < 20; i++) {
         "user_op":0,
         "actual_op":0
     };
-    if (JSONObject[i].operation == "+") {
-        JSONObject[i].actual_op = JSONObject[i].number1 + JSONObject[i].number2;
-    } else if (JSONObject[i].operation == "-") {
-        JSONObject[i].actual_op = JSONObject[i].number1 - JSONObject[i].number2;
-    } else if (JSONObject[i].operation == "/") {
-        JSONObject[i].actual_op = (JSONObject[i].number1 / JSONObject[i].number2).toFixed(2);
-    } else {
-        JSONObject[i].actual_op = JSONObject[i].number1 * JSONObject[i].number2;
+
+    var operation = JSONObject[i].operation;
+    switch(operation) {
+        case('+'): JSONObject[i].actual_op = JSONObject[i].number1 + JSONObject[i].number2;
+        break;
+        case('-'): JSONObject[i].actual_op = JSONObject[i].number1 - JSONObject[i].number2;
+        break;
+        case('/'): JSONObject[i].actual_op = (JSONObject[i].number1 / JSONObject[i].number2).toFixed(2);
+        break;
+        case('*'): JSONObject[i].actual_op = JSONObject[i].number1 * JSONObject[i].number2;
+        break;
     }
+   
 }
 
 function question() {
     var result = document.getElementById("result");
     result.style.visibility = "visible";
     result.value = "";
-    start_test = document.getElementById("start");
+    var start_test = document.getElementById("start");
     start_test.style.visibility = "hidden";
-    next = document.getElementById("next");
+    var next = document.getElementById("next");
     next.style.visibility = "visible";
     display(operand1,operand2,operator)
 }
-var j = 0;
+var check_index = 0;
 
 function display(number1,number2,operation) {
     var question = document.getElementById("question");
-    question.innerHTML = number1[j] + operation[j] + number2[j];
+    question.innerHTML = number1[check_index] + operation[check_index] + number2[check_index];
     var message = document.getElementById("message");
-    message.innerHTML="Question No" + (j + 1);
-    j = j + 1;
-    if ( j >= 21) {
+    message.innerHTML="Question No" + (check_index + 1);
+    check_index = check_index + 1;
+    if ( check_index >= 21) {
         var result = document.getElementById("result");
         var next = document.getElementById("next");
         var start_test = document.getElementById("start");
@@ -74,18 +76,18 @@ function displayAns() {
     matter.style.visibility = "hidden";
 }
 
-var k = 0;
+var index = 0;
 var score = 0;
 var user_result = [];
 
 function nextAndEvaluate() {
     
-    user_result[k] = document.getElementById("result").value;
-    JSONObject[k].user_op = user_result[k];
-    if (JSONObject[k].actual_op == user_result[k]) {
+    user_result[index] = document.getElementById("result").value;
+    JSONObject[index].user_op = user_result[index];
+    if (JSONObject[index].actual_op == user_result[index]) {
         score = score + 1;
     }
-    k = k + 1;
+    index = index + 1;
     var score_msg = document.getElementById("score");
     score_msg.innerHTML = "Your Score : " + score;
     question();
@@ -93,11 +95,10 @@ function nextAndEvaluate() {
 
 
 function displayAnswer() {
-    document.write("Test Finished: Your Results")
-    document.write("<br>" + "your score is " + score)
+    document.write("Test Finished: Your Results");
+    document.write("<br>" + "your score is " + score);
     for (var p = 0; p < 20; p++) {
         document.write( "<br/>" + (p + 1) +  "." + "Actual Output = " + JSONObject[p].actual_op + " " + " Your Output =  " + JSONObject [p].user_op);
     }
     return false;
-    
 }

@@ -6,7 +6,10 @@ function maxThreeSelected(clicked) {
     if (check_none.checked) {
         check_none.checked = false;
         clicked.checked = true;
-    }
+    } 
+    
+    var j = 0;
+    var index_array = []
     for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             count = count + 1;
