@@ -24,6 +24,8 @@ function validateForm() {
     if (message) {
         alert(message);
         return false;
+    } else {
+    return true;
     }
 }
 
