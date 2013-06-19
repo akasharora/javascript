@@ -1,0 +1,70 @@
+<html>
+  <head>
+   <link rel = "stylesheet" type = "text/css" href = "parent_children_checkbox.css">
+  </head>
+
+  <body>
+    <div id = "container">
+      <ul>
+
+        <li id = "colors" onclick = "displayChildren(this.id)">
+          Color: <input type = "checkbox">
+          <div class = "displaynone">
+            <ul>
+              <li>Red<input type = "checkbox" >
+              </li>
+              <li>Green<input type = "checkbox">
+              </li>
+              <li>White<input type = "checkbox">
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li id  = "movies" onclick = "displayChildren(this.id)">
+          Movies: <input type = "checkbox" >
+          <div class = "displaynone">
+            <ul>
+              <li>Dar<input type = "checkbox">
+              </li>
+              <li>Sir<input type = "checkbox" >
+              </li>
+            </ul>
+          </div>
+        </li>
+          
+        <li id = "drinks" onclick = "displayChildren(this.id)" >
+          Drinks: <input type = "checkbox">
+          <div class = "displaynone">
+            <ul>
+              <li>Pepsi<input type = "checkbox" >
+              </li>
+              <li>Coke<input type = "checkbox" >
+              </li>
+              <li>Dew<input type = "checkbox" >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li id  = "bikes"  onclick = "displayChildren(this.id)">
+          Bikes: <input type = "checkbox">
+          <div class = "displaynone">
+            <ul>
+              <li>Pulsar<input type = "checkbox" >
+              </li>
+              <li>Cbz<input type = "checkbox" >
+              </li>
+              <li>KTM Duke<input type = "checkbox" >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+ 
+    <script src = "parent_children_checkbox.js">
+    </script>
+  </body>
+</html>
