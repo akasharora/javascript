@@ -9,23 +9,21 @@ function validateForm() {
     var homepage_regex = /^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])$/;
     var message = "";
 
-    if(login.value == "") {
+    if (login.value == "") {
         message = "login Id can't be empty";
     } else if (!email_regex.test(email.value)) {
         message = "enter correct email";
     } else if (name.value == "") {
         message = "name field can't be empty";
-    } else if (!homepage_regex.test(homepage.value)){
+    } else if (!homepage_regex.test(homepage.value)) {
         message = "you have entered an invalid homepage";
-    } else if (text_area.value.length < 50){
+    } else if (text_area.value.length < 50) {
         message = "information is not complete: should be minimum 50 characters";
     }
 
     if (message) {
         alert(message);
         return false;
-    } else {
-    return true;
     }
 }
 
