@@ -57,28 +57,29 @@ function newRowAndEdit(clicked, operation) {             //this function perform
 
 function onSaveClick(clicked) {
     var rowindex = row_index(clicked);
-    var row1 = document.getElementById("data_table").rows[rowindex];
-    row1.deleteCell(2);
-    var cell = row1.getElementsByTagName("input");
+    var row_1 = document.getElementById("data_table").rows[rowindex];
+    row_1.deleteCell(2);
+    var cell = row_1.getElementsByTagName("input");
     var string = []
     for (var i = 0; i < cell.length; i++) {
         string[i] = cell[i].value;
     }
-    save(row1,string,0);
-    save(row1,string,1);
+    save(row_1,string,0);
+    save(row_1,string,1);
     
-    var table_rows = document.getElementById("data_table").getElementsByTagName("tr")
+    var table_rows = document.getElementById("data_table").getElementsByTagName("tr");
     var column_3 = table_rows[rowindex].insertCell(2);
+
     var element_3 = document.createElement("a");
     var edit_row = document.createTextNode("Edit/");
     element_3.appendChild(edit_row);
-    element_3.onclick =  (function(){newRowAndEdit(this,'edit')})
+    element_3.onclick =  (function(){newRowAndEdit(this,'edit')});
 
     var element_4 = document.createElement("a");
     var row_delete = document.createTextNode("Delete");
     element_4.appendChild(row_delete);
-    element_4.setAttribute("onclick","remove(this);");
-
+    element_4.onclick = (function(){remove(this)});
+    
     column_3.appendChild(element_3);
     column_3.appendChild(element_4);
     
@@ -89,6 +90,5 @@ function save(row,string,val) {
      var cell = document.createElement("p");
      var cellData = document.createTextNode(string[val])
      cell.appendChild(cellData);
-     column.appendChild(cell)
-     
+     column.appendChild(cell);
 }
