@@ -7,17 +7,22 @@ function maxThreeSelected(clicked) {
         check_none.checked = false;
         clicked.checked = true;
     } 
-    
-    var j = 0;
-    var index_array = []
+    var selected = [];
+    var index = 0;
     for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             count = count + 1;
+            selected[index] = checkboxes[i].value;
+            index = index + 1;
         }
+        
         if (count > 3) {
+            var remove_index = selected.indexOf(clicked.value);
+            selected.splice(remove_index, 1);
             clicked.checked = false; 
-            window.alert("you can't select more than three days");
+            window.alert("you can't select more than three days, you have already selected: " + selected[0] + " " + selected[1] + " " + selected[2]);
             return false;
+            
             }
        }
 }
