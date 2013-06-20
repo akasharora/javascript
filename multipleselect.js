@@ -5,19 +5,12 @@ function itemAdd(value) {
     var temp;
  
     if (value) {
-    temp = left_select;
-    left_select = right_select;
-    right_select = temp;
+        temp = left_select;
+        left_select = right_select;
+        right_select = temp;
     }
- 
-    for (var count=0; count < left_select.options.length; count++) {
- 
-        if (left_select.options[count].selected == true) {
-                var option = left_select.options[count];
-                
-                right_select.add(new Option(option.text, option.value));
-                left_select.remove(count);
-                count--;
-        }
+    while (left_select.selectedIndex.length != 0) {        //iterate until select length of selected indexes is not equal to zero
+        right_select.appendChild(left_select.options[left_select.selectedIndex]);
     }
 }
+
