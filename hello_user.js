@@ -1,21 +1,23 @@
-var firstname = prompt("please enter your first name");
-var name_regex = /^([\w+](\.)?(\s)?)+/i;
-var display_message = "";
-if (firstname == null) {
-    display_message = "please enter your first name properly";            //nested if else
-} else if (name_regex.test(firstname)) {
-    var lastname = prompt("please enter your last name");
-    if (lastname == null) {
-        display_message = "please enter your last name name properly"
-    } else if (name_regex.test(lastname)) {
-        display_message = "hello " + firstname + " " + lastname;
+try {
+    var first_name = prompt("please enter your first name");
+    if(!first_name) {
+        throw 'Invalid Character';
     } else {
-        display_message = "please try again and enter your last name properly";
+        var last_name = prompt("please enter your last name")
     }
-} else {
-    display_message = "please try again enter your first name properly";
+    if (!last_name) {
+        throw 'Invalid Character';
+    }
+} catch(error) {
+    alert(error + ": please try again and enter your name properly")
 }
-if (display_message) {
+var display_message = "";
+var name_regex = /^([\w+](\.)?(\s)?)+/i;
+
+if (name_regex.test(first_name) && name_regex.test(last_name)) {
+    display_message = "hello " + first_name + " " + last_name;
+}
+if (first_name && last_name) {
     alert(display_message);
+    document.write(display_message);
 }
-document.write(display_message);
