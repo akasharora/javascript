@@ -9,7 +9,7 @@ try {
         throw 'Invalid Character';
     }
 } catch(error) {
-    alert(error + ": please try again and enter your name properly")
+    alert(error.message + ": please try again and enter your name properly")
 }
 var display_message = "";
 var name_regex = /^([\w+](\.)?(\s)?)+/i;
