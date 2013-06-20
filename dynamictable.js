@@ -2,7 +2,6 @@ var tr_id = 0;
 var td_id = 50;
 
 function row_index(clicked) {
-    var row_index;
     while ((clicked = clicked.parentElement) && clicked.nodeName.toLowerCase() != "tr") {
     }
     return clicked.rowIndex;
@@ -13,7 +12,7 @@ function remove(clickedRow) {
     document.getElementById("data_table").deleteRow(rowindex);
 }
 
-function newRowAndEdit(clicked, operation) {             //this function performs both operations adds new row as well as edits row
+function newRowAndEdit(clicked, operation, string) {             //this function performs both operations adds new row as well as edits row
     var rowindex;
     var row;
 
@@ -27,9 +26,8 @@ function newRowAndEdit(clicked, operation) {             //this function perform
     
     if (operation == "edit") {
         row = document.getElementById("data_table").rows[rowindex]
-       
     }
-    var cell =[];
+    var cell = [];
     var element = [];
     for (var i = 0; i < 2; i++) {
         if (operation == "edit") {
@@ -39,6 +37,9 @@ function newRowAndEdit(clicked, operation) {             //this function perform
         element[i] = document.createElement("input");
         element[i].type = "textbox";
         element[i].setAttribute("id", (++td_id));
+        if (operation == "edit") {
+            element[i].setAttribute("value",string[i])
+        }
         cell[i].appendChild(element[i]);
     }
     
@@ -66,14 +67,12 @@ function onSaveClick(clicked) {
     }
     save(row_1,string,0);
     save(row_1,string,1);
-    
-    var table_rows = document.getElementById("data_table").getElementsByTagName("tr");
-    var column_3 = table_rows[rowindex].insertCell(2);
 
+    var column_3 = row_1.insertCell(2);
     var element_3 = document.createElement("a");
     var edit_row = document.createTextNode("Edit/");
     element_3.appendChild(edit_row);
-    element_3.onclick =  (function(){newRowAndEdit(this,'edit')});
+    element_3.onclick =  (function(){newRowAndEdit(this, 'edit', string)});
 
     var element_4 = document.createElement("a");
     var row_delete = document.createTextNode("Delete");
