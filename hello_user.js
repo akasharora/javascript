@@ -1,15 +1,16 @@
+var error_message = "please try again and enter your name properly"
 try {
     var first_name = prompt("please enter your first name");
     if(!first_name) {
-        throw 'Invalid Character';
+        throw error_message;
     } else {
         var last_name = prompt("please enter your last name")
     }
     if (!last_name) {
-        throw 'Invalid Character';
+        throw error_message;
     }
 } catch(error) {
-    alert(error.message + ": please try again and enter your name properly")
+    alert(error )
 }
 var display_message = "";
 var name_regex = /^([\w+](\.)?(\s)?)+/i;
