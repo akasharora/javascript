@@ -1,0 +1,6 @@
+
+#leftselect{float:left; width:80px; margin-left:20px; border:1px solid; height:72px}
+#rightselect{margin-top:-25px; width:80px; margin-left:30px; border:1px solid;height:72px}
+#add{background-color:orange; margin-left:20px;border-radius:100px;}
+#delete{background-color:orange; margin-left:20px;border-radius:100px;}
+select option{border-bottom:1px solid}
