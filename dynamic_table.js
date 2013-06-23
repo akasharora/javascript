@@ -84,10 +84,10 @@ function onSaveClick(clicked) {
     
 }
 function save(row,string,val) {
-     row.deleteCell(val);
-     var column = row.insertCell(val);
-     var cell = document.createElement("p");
-     var cellData = document.createTextNode(string[val])
-     cell.appendChild(cellData);
-     column.appendChild(cell);
+    row.deleteCell(val);
+    var column = row.insertCell(val);
+    var cell = document.createElement("p");
+    var cellData = document.createTextNode(string[val])
+    cell.appendChild(cellData);
+    column.appendChild(cell);
 }
