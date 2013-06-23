@@ -83,11 +83,11 @@ function onSaveClick(clicked) {
     column_3.appendChild(element_4);
     
 }
-function save(row,string,val) {
-    row.deleteCell(val);
-    var column = row.insertCell(val);
+function save(row,string,index) {
+    row.deleteCell(index);
+    var column = row.insertCell(index);
     var cell = document.createElement("p");
-    var cellData = document.createTextNode(string[val])
+    var cellData = document.createTextNode(string[index])
     cell.appendChild(cellData);
     column.appendChild(cell);
 }
